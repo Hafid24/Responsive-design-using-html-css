@@ -1,0 +1,139 @@
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7rem;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box; }
+
+.header__header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url(img/header-img.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem; }
+
+.header__logo {
+  height: 3.5rem; }
+
+.heading-primary {
+  color: #FFF;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+
+.heading-primary--main {
+  display: inline-block;
+  font-size: 60px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  letter-spacing: 2.5rem;
+  animation-name: Moveright;
+  animation-duration: 2s;
+  animation-timing-function: ease-out; }
+
+.heading-primary--sub {
+  display: inline-bloc;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 10px;
+  letter-spacing: 1.4rem;
+  animation-name: Moveleft;
+  animation-duration: 2s;
+  animation-timing-function: ease-out; }
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+@keyframes Moveright {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-2rem); }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes Moveleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+
+.btn--white {
+  background-color: #FFF;
+  color: #777;
+  animation-name: MoveUp;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 2s;
+  animation-fill-mode: backwards; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+.btn--white::after {
+  background: #FFF; }
+
+.btn:hover::after {
+  transform: scale(2);
+  opacity: 0; }
+
+@keyframes MoveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
